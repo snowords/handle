@@ -31,7 +31,7 @@ export const useNumberTone = computed(() => {
 })
 
 const params = new URLSearchParams(window.location.search)
-export const isDev = import.meta.hot || params.get('dev') === 'hey'
+export const isDev = true
 export const daySince = useDebounce(computed(() => {
   // Adjust date for daylight saving time, assuming START_DATE is not in DST
   const adjustedNow = isDstObserved(now.value) ? new Date(+now.value + 3600000) : now.value
